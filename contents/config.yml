@@ -26,3 +26,7 @@ sections:
     nav: AWARDS
     title: AWARDS
     icon: bi-award-fill
+  - id: projects
+    nav: PROJECTS
+    title: PROJECTS
+    icon: bi-folder-fill
