@@ -1,12 +1,23 @@
 title: User Name's Homepage
 page-top-title: Haikal
 top-section-bg-text: Dih
-backgrounds:
-  - static/assets/background/background_0.jpeg
-  - static/assets/background/background_1.jpeg
-background-interval-ms: 7000
-background-overlay: 0.52
-copyright-text: '&copy; Sen Li 2023-2026. All Rights Reserved.'
+home-avatar:
+  src: static/assets/img/photo_haikal.jpeg
+  alt: Profile photo
+  social-links:
+    - href: static/assets/pdf/Resume.pdf
+      icon: bi bi-file-earmark-pdf
+      aria-label: Download CV
+    - href: https://www.linkedin.com/in/haikal-i-ridha-817869326
+      icon: bi bi-linkedin
+      aria-label: LinkedIn
+    - href: https://github.com/haikalimamridha
+      icon: bi bi-github
+      aria-label: GitHub
+    - href: https://www.instagram.com/haikalirdh_
+      icon: bi bi-instagram
+      aria-label: Instagram
+copyright-text: '&copy; haikalswag 2026. All Rights Reserved.'
 github-link:
   text: Github
   href: https://github.com/haikalimamridha
@@ -16,17 +27,18 @@ license-link:
 sections:
   - id: home
     nav: HOME
-    title: User Name&ensp;|&ensp;姓名
-    href: '#page-top' # Default to '#<id>' if not specified
-  - id: publications
-    nav: PUBLICATIONS
-    title: PUBLICATIONS
-    icon: bi-file-text-fill
-  - id: awards
-    nav: AWARDS
-    title: AWARDS
-    icon: bi-award-fill
+    title: Haikal
+    href: '#home' # Default to '#<id>' if not specified
   - id: projects
     nav: PROJECTS
     title: PROJECTS
     icon: bi-folder-fill
+  - id: services
+    nav: SERVICES
+    title: SERVICES
+    icon: bi-bag-plus
+  - id: journal
+    nav: JOURNAL
+    title: JOURNAL
+    icon: bi-file-text-fill
+

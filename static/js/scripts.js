@@ -161,7 +161,26 @@ function renderSections(sections) {
 
         header.appendChild(title);
         container.appendChild(header);
-        container.appendChild(body);
+
+        if (section.id === 'home') {
+            const layout = document.createElement('div');
+            layout.className = 'home-layout';
+
+            const left = document.createElement('div');
+            left.className = 'home-left';
+            left.id = 'home-avatar-container';
+
+            const right = document.createElement('div');
+            right.className = 'home-right';
+            right.appendChild(body);
+
+            layout.appendChild(left);
+            layout.appendChild(right);
+            container.appendChild(layout);
+        } else {
+            container.appendChild(body);
+        }
+
         sectionElement.appendChild(container);
         sectionsContainer.appendChild(sectionElement);
     });
@@ -281,9 +300,13 @@ function applyConfig(yml) {
             return;
         }
 
-        const element = document.getElementById(key);
         const value = yml[key];
+        if (key === 'home-avatar' || key === 'avatar') {
+            renderHomeAvatar(value);
+            return;
+        }
 
+        const element = document.getElementById(key);
         if (!element) {
             console.log("Unknown id and value: " + key + "," + stringifyValue(value))
             return;
@@ -295,6 +318,55 @@ function applyConfig(yml) {
             console.log("Invalid id and value: " + key + "," + stringifyValue(value))
         }
     });
+}
+
+function renderHomeAvatar(config) {
+    const container = document.getElementById('home-avatar-container');
+    if (!container) {
+        return;
+    }
+
+    container.replaceChildren();
+    if (!config || !config.src) {
+        return;
+    }
+
+    const avatar = document.createElement('div');
+    avatar.id = 'avatar';
+
+    const img = document.createElement('img');
+    img.className = 'shadow';
+    img.src = decodeText(config.src);
+    img.alt = decodeText(config.alt || 'Profile photo');
+    avatar.appendChild(img);
+
+    if (Array.isArray(config['social-links'])) {
+        const socialLinks = document.createElement('div');
+        socialLinks.className = 'social-links';
+
+        config['social-links'].forEach((item) => {
+            if (!item || !item.href || !item.icon) {
+                return;
+            }
+
+            const link = document.createElement('a');
+            link.href = item.href;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.setAttribute('aria-label', decodeText(item['aria-label'] || 'social link'));
+
+            const icon = document.createElement('i');
+            icon.className = decodeText(item.icon);
+            link.appendChild(icon);
+            socialLinks.appendChild(link);
+        });
+
+        if (socialLinks.childElementCount > 0) {
+            avatar.appendChild(socialLinks);
+        }
+    }
+
+    container.appendChild(avatar);
 }
 
 function getConfiguredSections(yml) {
@@ -334,12 +406,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
     loadConfig()
         .then((yml) => {
-            applyConfig(yml);
             const sections = normalizeSections(yml.sections);
 
             renderNavigation(getNavigationItems(yml));
             renderSections(sections);
-            initBackgroundSlideshow(yml);
+            applyConfig(yml);
+            // initBackgroundSlideshow(yml); // disabled
             activateScrollSpy();
             bindResponsiveNavbar();
 

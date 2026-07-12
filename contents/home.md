@@ -1,15 +1,10 @@
-
-
-[![haikalimamridha](https://img.shields.io/badge/haikalimamridha-github-blue?logo=github)](https://github.com/haikalimamridha)
-
-I am currently a Fellow in the Department of Computer Sciences at Diponegoro University.
+I am Haikal Imam Ridha, a Computer Science student at Diponegoro University with a keen interest in Software Development and System for Machine Learning. Driven by a desire to build robust computing systems, I am actively looking for an internship to apply my skills to real-world engineering challenges.
 
 #### Contact
 
-Email: haikalimamridha@gmail.com
+Email: haikalimamrida[at]students.undip.ac.id; haikalimamridha[at]gmail.com  
+(open for internship)
 
 #### Education
-B.Sc., Computer Science, Diponegoro University , 2024—now.
 
-#### Research Interests
-Machine Learning for Seismology; Foundation Model; Observational Seismology; Microseismic Monitoring
+B.Sc., Computer Science, Diponegoro University, 2024 — Present.
