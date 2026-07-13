@@ -3,8 +3,6 @@ I am Haikal Imam Ridha, a Computer Science student at Diponegoro University with
 #### Contact
 
 Email: haikalimamrida[at]students.undip.ac.id; haikalimamridha[at]gmail.com  
-(open for internship)
 
 #### Education
-
-B.Sc., Computer Science, Diponegoro University, 2024 — Present.
+Undergraduate Computer Science, Diponegoro University, 2024 — Present.
