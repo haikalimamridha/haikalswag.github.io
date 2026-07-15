@@ -5,10 +5,20 @@
   - Link: https://github.com/haikalimamridha/niikah-id
   - Tech: Go, JavaScript, CSS, HTML, Postgresql
 
+  <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:8px; margin-bottom:24px;">
+    <img src="static/assets/project_img/niikah-1.png" alt="Project preview" width="450" style="border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+    <img src="static/assets/project_img/niikah-2.png" alt="Project preview" width="450" style="border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+  </div>
+
 - **Hotel Management System**
   - Description: Hotel Management System is a desktop-based hotel management application that helps users manage rooms, reservations, guests, and employees through an interactive Java Swing interface.
   - Link: https://github.com/haikalimamridha/Hotel-Management-System  
   - Tech: Java, Swing, MySQL, Maven
+
+  <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:8px; margin-bottom:24px;">
+    <img src="static/assets/project_img/HMS1.png" alt="Project preview" width="350" style="border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+    <img src="static/assets/project_img/HMS2.png" alt="Project preview" width="350" style="border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+  </div>
 
 - **Wumpus World Analytics**
   - Description: A Python-based simulator for comparing classical search algorithms in a Wumpus World environment. This project was developed as an academic study to evaluate the performance of uninformed and informed search algorithms on the same navigation problem.
