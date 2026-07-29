@@ -113,9 +113,22 @@ section header h2{
 }
 
 section .main-body{
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
     font-weight: 200;
-    line-height: 2.4rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 768px) {
+    section .main-body {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    section .main-body ul,
+    section .main-body ol {
+        padding-left: 1.2rem;
+    }
 }
 
 #sections {
@@ -247,6 +260,34 @@ section .main-body{
 
 #avatar .social-links a i {
     line-height: 1;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.project-image {
+    display: block;
+    width: min(100%, 28rem);
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .project-gallery {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .project-image {
+        width: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

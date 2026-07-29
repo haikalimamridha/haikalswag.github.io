@@ -5,9 +5,9 @@
   - Link: https://github.com/haikalimamridha/niikah-id
   - Tech: Go, JavaScript, CSS, HTML, Postgresql
 
-  <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:8px; margin-bottom:24px;">
-    <img src="static/assets/project_img/niikah-1.png" alt="Project preview" width="450" style="border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-    <img src="static/assets/project_img/niikah-2.png" alt="Project preview" width="450" style="border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+  <div class="project-gallery">
+    <img class="project-image" src="static/assets/project_img/niikah-1.png" alt="Project preview">
+    <img class="project-image" src="static/assets/project_img/niikah-2.png" alt="Project preview">
   </div>
 
 - **Hotel Management System**
@@ -15,9 +15,9 @@
   - Link: https://github.com/haikalimamridha/Hotel-Management-System  
   - Tech: Java, Swing, MySQL, Maven
 
-  <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:8px; margin-bottom:24px;">
-    <img src="static/assets/project_img/HMS1.png" alt="Project preview" width="350" style="border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-    <img src="static/assets/project_img/HMS2.png" alt="Project preview" width="350" style="border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+  <div class="project-gallery">
+    <img class="project-image" src="static/assets/project_img/HMS1.png" alt="Project preview">
+    <img class="project-image" src="static/assets/project_img/HMS2.png" alt="Project preview">
   </div>
 
 - **Wumpus World Analytics**

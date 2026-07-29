@@ -42,6 +42,8 @@ assert.equal(/<img\b[^>]*\bsrc="static\/assets\/img\/photo\.png"[^>]*\bwidth=/.t
 assert.equal(/<img\b[^>]*\bsrc="static\/assets\/img\/photo\.png"[^>]*\bheight=/.test(index), false, 'avatar image should not force a fixed height attribute');
 assert.match(mainCss, /#avatar img[\s\S]*height:\s*auto/, 'avatar CSS should preserve the original image ratio');
 assert.match(mainCss, /#avatar img[\s\S]*width:\s*min\(180px,\s*max\(130px,\s*calc\(100vw \/ 6\)\)\)/, 'avatar should keep responsive sizing with a smaller desktop maximum');
+assert.match(mainCss, /project-gallery|project-image/, 'project gallery images should have dedicated responsive CSS classes');
+assert.match(mainCss, /@media[\s\S]*max-width:\s*768px[\s\S]*project-gallery/, 'project galleries should stack vertically on narrow screens');
 assert.match(mainCss, /\.top-section[\s\S]*height:\s*25rem/, 'hero should keep its full original height');
 assert.match(gitignore, /^\.superpowers\/$/m, '.superpowers companion artifacts should be ignored');
 assert.equal(/getElementById\(key\)\.innerHTML\s*=\s*yml\[key\]/.test(scripts), false, 'YAML config values should not be injected with innerHTML');
