@@ -10,6 +10,16 @@
     <img class="project-image" src="static/assets/project_img/niikah-2.png" alt="Project preview">
   </div>
 
+- **Navix**  
+  - Description: Navix is an advanced supply chain risk prediction platform designed to identify and mitigate logistics risks across Indonesia. By leveraging a multi-agent AI orchestration pipeline, Navix provides real-time insights into potential disruptions, cost fluctuations, and regulatory hurdles before they impact your business.
+  - Link: https://github.com/haikalimamridha/navix
+  - Tech: Next.js, TypeScript, Tailwind CSS
+
+  <div class="project-gallery">
+    <img class="project-image" src="static/assets/project_img/navix-1.png" alt="Project preview">
+    <img class="project-image" src="static/assets/project_img/navix-3.png" alt="Project preview">
+  </div>
+
 - **Hotel Management System**
   - Description: Hotel Management System is a desktop-based hotel management application that helps users manage rooms, reservations, guests, and employees through an interactive Java Swing interface.
   - Link: https://github.com/haikalimamridha/Hotel-Management-System  
