@@ -1,118 +1,68 @@
+# Haikal's Portfolio
 
+A highly configurable, responsive personal portfolio website built with HTML, CSS, and JavaScript. This project is designed to be easily customizable via YAML configuration and Markdown content files.
 
-![Github Forks](https://img.shields.io/github/forks/senli1073/academic-homepage-template?style=flat)
-![Github Stars](https://img.shields.io/github/stars/senli1073/academic-homepage-template?style=flat)
-![License](https://img.shields.io/github/license/senli1073/academic-homepage-template)
-![Last Commit](https://img.shields.io/github/last-commit/senli1073/academic-homepage-template)
+## 🚀 Live Demo
 
-# A simple Github Pages template for personal academic websites.
+Check out the live version here: [haikalimamridha.github.io](https://haikalimamridha.github.io/haikalswag.github.io/)
 
-> ⚠️ SECURITY NOTICE (2026-06)
-> 
-> Older versions of this template include a polyfill.io dependency
-> which may cause malicious popups.
->
-> Please update to the latest version immediately.
+## ✨ Features
 
-## Preview
-[![Screenshot of the Website](https://raw.githubusercontent.com/senli1073/academic-homepage-template/main/screenshot_full.png)](https://senli1073.github.io/)
+- **YAML-Powered Configuration**: Easily update your site's title, navigation, social links, and section icons without touching HTML.
+- **Dynamic Markdown Content**: Manage your content using simple Markdown files.
+- **Responsive Design**: Built with Bootstrap 5 and custom CSS to look great on all devices.
+- **Math Support**: Integrated with MathJax for beautiful mathematical notation.
+- **Interactive Project Gallery**: Showcase your work with responsive image galleries.
+- **Test Suite**: Includes automated tests to ensure template quality and functionality.
 
+## 🛠️ Project Structure
 
-## Introduction
-
-This personal academic website template is based on [startbootstrap](https://github.com/StartBootstrap/startbootstrap-new-age).
-
-The template is designed to integrate Markdown files as content input.  There's no need to compile the webpage before deployment.  Upon loading, the Markdown files are automatically parsed and embedded into the page.
-
-The homepage sections and navigation bar are configured in `contents/config.yml`. Each section loads its body from a matching Markdown file in `contents/`, such as `contents/publications.md`.
-
-The top background supports multiple images. Add images under `static/assets/background/`, list them in `contents/config.yml`, and the page will pick a random first image on refresh before rotating through the list.
-
-This template supports LaTeX formula input. You can use `$...$` and `\(...\)` as delimiters for inline-math, or use `$$...$$` and `\[...\]` as delimiters for display-math. Macros such as `\ref{...}`, `\eqref{...}`, and `\begin{equation}...\end{equation}` are also supported. See [MathJax](https://docs.mathjax.org/en/latest/index.html) for more details.
-
-:milky_way: Demo: https://senli1073.github.io/
-
-
-## Getting Start
-### 1. Fork this repository
-The repository name should be `<username>.github.io`, which will also be your website's URL.
-
-
-### 2. Edit page content
-
-(1) Go to the folder where you want to store your project, and clone the new repository:
-```
-git clone https://github.com/<username>/<username>.github.io.git
-```
-The directory structure is as follows:
-
-```.
-.
-├── contents
-└── static
-    ├── assets
-    │   ├── background
-    │   └── img
-    ├── css
-    └── js
+```text
+├── contents/               # Configuration and content files
+│   ├── config.yml          # Main site configuration
+│   ├── home.md             # Biography and contact info
+│   ├── projects.md         # Detailed project showcase
+│   ├── services.md         # Experience and services
+│   └── journal.md          # Academic papers and journals
+├── static/                 # Static assets
+│   ├── assets/             # Images, PDFs, and favicons
+│   ├── css/                # Custom and Bootstrap styles
+│   └── js/                 # Site logic and dependencies
+├── tests/                  # Test scripts
+├── index.html              # Main landing page
+└── LICENSE                 # MIT License
 ```
 
-(2) Modify the content of each section, which corresponds to `contents/*.md`.
+## ⚙️ Customization
 
-(3) Adjust the title, copyright information, background images, footer links, navigation, and sections in `contents/config.yml`.
+### 1. Main Configuration
+Modify `contents/config.yml` to update:
+- Site Title and Navbar Brand
+- Social Media Links (LinkedIn, GitHub, Instagram, etc.)
+- CV/Resume Link
+- Section definitions (ID, Title, Icon, Navigation text)
 
-Example section configuration:
+### 2. Updating Content
+Edit the `.md` files in the `contents/` directory to update your information. The site automatically parses these files and injects the HTML into the corresponding sections.
 
-```yaml
-sections:
-  - id: home
-    nav: HOME
-    title: User Name&ensp;|&ensp;姓名
-    href: '#page-top'
-  - id: publications
-    nav: PUBLICATIONS
-    title: PUBLICATIONS
-    icon: bi-file-text-fill
-  - id: awards
-    nav: AWARDS
-    title: AWARDS
-    icon: bi-award-fill
+### 3. Adding Projects
+The `projects.md` file supports a custom `<div class="project-gallery">` to display multiple screenshots for each project.
+
+## 🧪 Running Tests
+
+The project includes tests to ensure everything is working correctly. You can run them using Node.js:
+
+```bash
+node tests/template-quality.test.js
+node tests/background-selection.test.js
 ```
 
-For each section, `id` maps to `contents/<id>.md`, `nav` sets the navigation text, `title` sets the section heading, and `icon` is an optional [Bootstrap Icons](https://icons.getbootstrap.com/) class. If `href` is omitted, the navigation link defaults to `#<id>`.
+## 📄 License
 
-Example background configuration:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```yaml
-backgrounds:
-  - static/assets/background/background_0.jpeg
-  - static/assets/background/background_1.png
-background-interval-ms: 7000
-background-overlay: 0.52
-```
+## ✍️ Author
 
-(4) Replace background images in `static/assets/background/` and replace the profile photo in `static/assets/img/`.
-
-(5) Push it: 
-```
-git commit -am 'init'
-git push
-```
-
-### 3. Setup
-(1) Under your repository name, click `Settings`.
-
-(2) In the "Code and automation" section of the sidebar, click `Pages`.
-
-(3) Under "Build and deployment", under "Source", select Deploy from a branch. Then, use the branch dropdown menu and select a publishing source.
-
-### 4. Enjoy
-
-Fire up a browser and go to `https://<username>.github.io`
-
-> Note that it can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub.
-
-
-## License
-
-Copyright Sen Li, 2023-2025. Licensed under an MIT license. You can copy and mess with this template.
+**Haikal Imam Ridha**
+- GitHub: [@haikalimamridha](https://github.com/haikalimamridha)
+- LinkedIn: [Haikal I Ridha](https://www.linkedin.com/in/haikal-i-ridha-817869326)
